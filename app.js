@@ -1,66 +1,37 @@
+// prueba-h58b.js
 const { ThermalPrinter, PrinterTypes } = require("node-thermal-printer");
 
-// Cambia "printer:auto" por el nombre exacto de tu impresora si quieres
-let printer = new ThermalPrinter({
-    type: PrinterTypes.CUSTOM,
-    interface: "printer:auto", // usa la impresora instalada en Windows (Bluetooth/USB)
-});
-
-async function printOrder(order) {
-    printer.alignCenter();
-    printer.println("NUEVO PEDIDO");
-    printer.drawLine();
-
-    printer.alignLeft();
-    printer.println(`Mesa: ${order.mesa}`);
-
-    order.items.forEach(item => {
-        printer.println(`${item.cantidad}x ${item.nombre}`);
+async function testPrinter() {
+    // Configura la impresora
+    let printer = new ThermalPrinter({
+        type: PrinterTypes.EPSON,    // usa EPSON para ESC/POS
+        interface: "printer:auto"    // Windows maneja la H58B Bluetooth
     });
 
-    printer.drawLine();
-    printer.cut();
-
     try {
+        // Verifica si la impresora está conectada
         const isConnected = await printer.isPrinterConnected();
-        console.log("Printer conectada:", isConnected);
+        console.log("¿Impresora conectada?", isConnected);
+
+        if (!isConnected) {
+            console.log("Revisa que la H58B esté emparejada y encendida.");
+            return;
+        }
+
+        // Imprime algo de prueba
+        printer.alignCenter();
+        printer.println("=== PRUEBA H58B ===");
+        printer.println("¡Hola, impresora!");
+        printer.drawLine();
+        printer.cut();
 
         await printer.execute();
-        console.log("Impreso correctamente");
+        console.log("Texto de prueba enviado ✅");
+
     } catch (err) {
-        console.error("Error imprimiendo:", err);
+        console.error("Error al conectar o imprimir:", err);
     }
 }
 
-// SOCKET.IO - Igual que antes
-const { io } = require("socket.io-client");
-
-const socket = io("https://tu-backend.com", {
-    auth: {
-        token: "TOKEN_DEL_RESTAURANTE"
-    }
-});
-
-socket.on("connect", () => {
-    console.log("Print Agent conectado");
-});
-
-socket.on("new_order", async (order) => {
-    console.log("Pedido recibido:", order);
-    await printOrder(order);
-});
-
-socket.on("disconnect", () => {
-    console.log("Desconectado, reconectando...");
-});
-
-// TEST MANUAL
-const testOrder = {
-    mesa: 5,
-    items: [
-        { cantidad: 2, nombre: "Ceviche mixto" },
-        { cantidad: 1, nombre: "Chicha morada" }
-    ]
-};
-
-printOrder(testOrder);
+// Ejecuta la prueba
+testPrinter();
