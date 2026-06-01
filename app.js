@@ -25,7 +25,7 @@ function printGoodMorning(portName) {
 }
 
 // Función principal para listar y procesar todos los puertos
-async function main() {
+async function start() {
     console.log("Buscando puertos seriales activos...");
     try {
         const ports = await SerialPort.list();
@@ -50,10 +50,9 @@ async function main() {
         }
         
         console.log("\nProceso terminado para todos los puertos.");
-        return
     } catch (err) {
         console.error("Error al listar los puertos seriales:", err.message);
     }
 }
 
-main()
+module.exports = { start };

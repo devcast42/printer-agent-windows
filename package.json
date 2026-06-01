@@ -2,9 +2,11 @@
   "name": "printer-agent",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,19 @@
     "escpos": "^3.0.0-alpha.6",
     "escpos-serialport": "^3.0.0-alpha.4",
     "serialport": "^13.0.0"
+  },
+  "devDependencies": {
+    "electron": "^42.3.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.bitex.printeragent",
+    "productName": "Printer Agent",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "**/*"
+    ]
   }
 }

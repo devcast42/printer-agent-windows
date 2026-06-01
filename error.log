@@ -1,0 +1,149 @@
+C@DESKTOP-4IVAH3K MINGW64 ~/printer-agent-windows (main)
+$ npm run build
+
+> printer-agent@1.0.0 build
+> electron-builder
+
+  • electron-builder  version=26.8.1 os=10.0.26200
+  • loaded configuration  file=package.json ("build" field)
+  • description is missed in the package.json  appPackageFile=C:\Users\PC\printer-agent-windows\package.json
+  • writing effective config  file=dist\builder-effective-config.yaml
+  • executing @electron/rebuild  electronVersion=42.3.0 arch=x64 buildFromSource=false workspaceRoot=C:\Users\PC\printer-agent-windows projectDir=./ appDir=./
+  • installing native dependencies  arch=x64
+  • preparing       moduleName=@serialport/bindings-cpp arch=x64
+  • finished        moduleName=@serialport/bindings-cpp arch=x64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=x64 electron=42.3.0 appOutDir=dist\win-unpacked
+  • downloading     url=https://github.com/electron/electron/releases/download/v42.3.0/electron-v42.3.0-win32-x64.zip size=144 MB parts=8
+  • downloaded      url=https://github.com/electron/electron/releases/download/v42.3.0/electron-v42.3.0-win32-x64.zip duration=15.33s
+  • searching for node modules  pm=npm searchDir=C:\Users\PC\printer-agent-windows
+(node:18848) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  • duplicate dependency references  dependencies=["serialport@13.0.0","ndarray@1.0.19","combined-stream@1.0.8","mime-types@2.1.35","mime-types@2.1.35"]
+  • updating asar integrity executable resource  executablePath=dist\win-unpacked\Printer Agent.exe
+  • default Electron icon is used  reason=application icon is not set
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=1.714s
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+
+    Extracting archive: C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055.7z
+    --
+    Path = C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+
+
+    Sub items Errors: 2
+
+    Archives with Errors: 1
+
+    Sub items Errors: 2
+
+                    errorOut=ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055\darwin\10.12\lib\libssl.dylib
+
+                    command='C:\Users\PC\printer-agent-windows\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055.7z' '-oC:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\682062055'
+                    workingDir=C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=1.086s
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+
+    Extracting archive: C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667.7z
+    --
+    Path = C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+
+
+    Sub items Errors: 2
+
+    Archives with Errors: 1
+
+    Sub items Errors: 2
+
+                    errorOut=ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667\darwin\10.12\lib\libssl.dylib
+
+                    command='C:\Users\PC\printer-agent-windows\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667.7z' '-oC:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\613055667'
+                    workingDir=C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=1.152s
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+
+    Extracting archive: C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307.7z
+    --
+    Path = C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+
+
+    Sub items Errors: 2
+
+    Archives with Errors: 1
+
+    Sub items Errors: 2
+
+                    errorOut=ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307\darwin\10.12\lib\libssl.dylib
+
+                    command='C:\Users\PC\printer-agent-windows\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307.7z' '-oC:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\346006307'
+                    workingDir=C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign
+  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=1.219s
+  ⨯ cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+
+    Extracting archive: C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727.7z
+    --
+    Path = C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+
+
+    Sub items Errors: 2
+
+    Archives with Errors: 1
+
+    Sub items Errors: 2
+
+                    errorOut=ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : El cliente no dispone de un privilegio requerido. : C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727\darwin\10.12\lib\libssl.dylib
+
+                    command='C:\Users\PC\printer-agent-windows\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727.7z' '-oC:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign\589847727'
+                    workingDir=C:\Users\PC\AppData\Local\electron-builder\Cache\winCodeSign
+
