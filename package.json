@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "escpos": "^3.0.0-alpha.6",
-    "escpos-serialport": "^3.0.0-alpha.4"
+    "escpos-serialport": "^3.0.0-alpha.4",
+    "serialport": "^13.0.0"
   }
 }

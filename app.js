@@ -7,12 +7,19 @@ const device = new escpos.SerialPort("COM3", {
 
 const printer = new escpos.Printer(device);
 
-device.open(() => {
-    printer
-        .align("ct")
-        .text("=== PRUEBA H58B ===")
-        .text("Hola desde COM3")
-        .drawLine()
-        .cut()
-        .close();
-});
+// device.open(() => {
+//     printer
+//         .align("ct")
+//         .text("=== PRUEBA H58B ===")
+//         .text("Hola desde COM3")
+//         .drawLine()
+//         .cut()
+//         .close();
+// });
+
+const { SerialPort } = require('serialport')
+
+// SerialPort.list().then(x => {
+//     console.log(x);
+    
+// })
