@@ -6,8 +6,7 @@ const { SerialPort } = require('serialport');
 function printGoodMorning(portName) {
     console.log(`[${portName}] Inicializando puerto...`);
     const device = new escpos.SerialPort(portName, {
-        baudRate: 9600,
-        autoOpen: false
+        baudRate: 9600
     });
     
     const printer = new escpos.Printer(device);
